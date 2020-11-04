@@ -16,6 +16,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018051411;
+$plugin->version   = 2018051412;
 $plugin->requires  = 2018050800;
 $plugin->component = 'local_commercedev';

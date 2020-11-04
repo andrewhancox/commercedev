@@ -1,0 +1,12 @@
+div.product.card {
+    width: 24rem;
+    margin-top: 0.5rem;
+}
+
+div.product.card > div.card-footer {
+    padding: 0;
+}
+
+div.product.card div.price.card {
+    margin: 0;
+}
