@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "name": "Site subscription",
+      "description": "<p dir=\"ltr\" style=\"text-align:left;\">Buy this to get access to all the basic content on the site.<\/p>",
+      "prices": [
+        {
+          "description": "<p dir=\"ltr\" style=\"text-align:left;\">Pay for site access monthly for flexibility!<\/p>",
+          "price": "\u00a310",
+          "recurrence": "Recurring subscription: 1 Month(s)",
+          "form": "<button class=\"btn btn-primary checkout-button_1\">Checkout<\/button>\n\n<script type=\"text\/javascript\">\n    \/\/ Create an instance of the Stripe object with your publishable API key\n    var checkoutButtons = document.getElementsByClassName('checkout-button_1');\n\n    for (var i = 0; i < checkoutButtons.length; i++) {\n        checkoutButtons[i].addEventListener('click', function () {\n            \/\/ Create a new Checkout Session using the server-side endpoint you\n            \/\/ created in step 3.\n            fetch('http:\/\/oslmoodle.local.test\/local\/commerce\/provider\/stripecheckout\/handlers\/sessioncreator.php?sesskey=vXzXn5AqJx&priceid=1', {\n                method: 'POST',\n            })\n                    .then(function (response) {\n                        return response.json();\n                    })\n                    .then(function (session) {\n                        var stripe = Stripe('pk_test_nZFKYYfn6RspWO9ZvOaqwltk');\n                        return stripe.redirectToCheckout({sessionId: session.id});\n                    })\n                    .then(function (result) {\n                        \/\/ If `redirectToCheckout` fails due to a browser or network\n                        \/\/ error, you should display the localized error message to your\n                        \/\/ customer using `error.message`.\n                        if (result.error) {\n                            alert(result.error.message);\n                        }\n                    })\n                    .catch(function (error) {\n                        console.error('Error:', error);\n                    });\n        });\n    }\n<\/script>"
+        },
+        {
+          "description": "<p dir=\"ltr\" style=\"text-align:left;\">Buy perpetual access to the site for best value!<\/p>",
+          "price": "\u00a3100",
+          "recurrence": "Perpetual",
+          "form": "<button class=\"btn btn-primary checkout-button_2\">Checkout<\/button>\n\n<script type=\"text\/javascript\">\n    \/\/ Create an instance of the Stripe object with your publishable API key\n    var checkoutButtons = document.getElementsByClassName('checkout-button_2');\n\n    for (var i = 0; i < checkoutButtons.length; i++) {\n        checkoutButtons[i].addEventListener('click', function () {\n            \/\/ Create a new Checkout Session using the server-side endpoint you\n            \/\/ created in step 3.\n            fetch('http:\/\/oslmoodle.local.test\/local\/commerce\/provider\/stripecheckout\/handlers\/sessioncreator.php?sesskey=vXzXn5AqJx&priceid=2', {\n                method: 'POST',\n            })\n                    .then(function (response) {\n                        return response.json();\n                    })\n                    .then(function (session) {\n                        var stripe = Stripe('pk_test_nZFKYYfn6RspWO9ZvOaqwltk');\n                        return stripe.redirectToCheckout({sessionId: session.id});\n                    })\n                    .then(function (result) {\n                        \/\/ If `redirectToCheckout` fails due to a browser or network\n                        \/\/ error, you should display the localized error message to your\n                        \/\/ customer using `error.message`.\n                        if (result.error) {\n                            alert(result.error.message);\n                        }\n                    })\n                    .catch(function (error) {\n                        console.error('Error:', error);\n                    });\n        });\n    }\n<\/script>"
+        }
+      ]
+    },
+    {
+      "name": "Course enrolment",
+      "description": "<p dir=\"ltr\" style=\"text-align:left;\">Get access to this course, it's amazing! You'll learn so much stuff.<\/p>",
+      "prices": [
+        {
+          "description": "<p dir=\"ltr\" style=\"text-align:left;\">We only sell perpetual access to the course because it's actually a bit rubbish.<\/p>",
+          "price": "\u00a3100",
+          "recurrence": "Perpetual",
+          "form": "<button class=\"btn btn-primary checkout-button_3\">Checkout<\/button>\n\n<script type=\"text\/javascript\">\n    \/\/ Create an instance of the Stripe object with your publishable API key\n    var checkoutButtons = document.getElementsByClassName('checkout-button_3');\n\n    for (var i = 0; i < checkoutButtons.length; i++) {\n        checkoutButtons[i].addEventListener('click', function () {\n            \/\/ Create a new Checkout Session using the server-side endpoint you\n            \/\/ created in step 3.\n            fetch('http:\/\/oslmoodle.local.test\/local\/commerce\/provider\/stripecheckout\/handlers\/sessioncreator.php?sesskey=vXzXn5AqJx&priceid=3', {\n                method: 'POST',\n            })\n                    .then(function (response) {\n                        return response.json();\n                    })\n                    .then(function (session) {\n                        var stripe = Stripe('pk_test_nZFKYYfn6RspWO9ZvOaqwltk');\n                        return stripe.redirectToCheckout({sessionId: session.id});\n                    })\n                    .then(function (result) {\n                        \/\/ If `redirectToCheckout` fails due to a browser or network\n                        \/\/ error, you should display the localized error message to your\n                        \/\/ customer using `error.message`.\n                        if (result.error) {\n                            alert(result.error.message);\n                        }\n                    })\n                    .catch(function (error) {\n                        console.error('Error:', error);\n                    });\n        });\n    }\n<\/script>"
+        }
+      ]
+    },
+    {
+      "name": "upset",
+      "description": "<p dir=\"ltr\" style=\"text-align:left;\">Pay for access to the premium content on the course and you'll find happiness.<\/p>",
+      "prices": [
+        {
+          "description": "",
+          "price": "\u00a3100",
+          "recurrence": "Perpetual",
+          "form": "<button class=\"btn btn-primary checkout-button_4\">Checkout<\/button>\n\n<script type=\"text\/javascript\">\n    \/\/ Create an instance of the Stripe object with your publishable API key\n    var checkoutButtons = document.getElementsByClassName('checkout-button_4');\n\n    for (var i = 0; i < checkoutButtons.length; i++) {\n        checkoutButtons[i].addEventListener('click', function () {\n            \/\/ Create a new Checkout Session using the server-side endpoint you\n            \/\/ created in step 3.\n            fetch('http:\/\/oslmoodle.local.test\/local\/commerce\/provider\/stripecheckout\/handlers\/sessioncreator.php?sesskey=vXzXn5AqJx&priceid=4', {\n                method: 'POST',\n            })\n                    .then(function (response) {\n                        return response.json();\n                    })\n                    .then(function (session) {\n                        var stripe = Stripe('pk_test_nZFKYYfn6RspWO9ZvOaqwltk');\n                        return stripe.redirectToCheckout({sessionId: session.id});\n                    })\n                    .then(function (result) {\n                        \/\/ If `redirectToCheckout` fails due to a browser or network\n                        \/\/ error, you should display the localized error message to your\n                        \/\/ customer using `error.message`.\n                        if (result.error) {\n                            alert(result.error.message);\n                        }\n                    })\n                    .catch(function (error) {\n                        console.error('Error:', error);\n                    });\n        });\n    }\n<\/script>"
+        }
+      ]
+    },
+    {
+      "name": "premium up-sell",
+      "description": "<p dir=\"ltr\" style=\"text-align:left;\">This is the <strong>BOMB <\/strong>totally worth it.<\/p>",
+      "prices": [
+        {
+          "description": "<p dir=\"ltr\" style=\"text-align:left;\">Very, very expensive though<\/p>",
+          "price": "\u00a31000",
+          "recurrence": "Perpetual",
+          "form": "<button class=\"btn btn-primary checkout-button_5\">Checkout<\/button>\n\n<script type=\"text\/javascript\">\n    \/\/ Create an instance of the Stripe object with your publishable API key\n    var checkoutButtons = document.getElementsByClassName('checkout-button_5');\n\n    for (var i = 0; i < checkoutButtons.length; i++) {\n        checkoutButtons[i].addEventListener('click', function () {\n            \/\/ Create a new Checkout Session using the server-side endpoint you\n            \/\/ created in step 3.\n            fetch('http:\/\/oslmoodle.local.test\/local\/commerce\/provider\/stripecheckout\/handlers\/sessioncreator.php?sesskey=vXzXn5AqJx&priceid=5', {\n                method: 'POST',\n            })\n                    .then(function (response) {\n                        return response.json();\n                    })\n                    .then(function (session) {\n                        var stripe = Stripe('pk_test_nZFKYYfn6RspWO9ZvOaqwltk');\n                        return stripe.redirectToCheckout({sessionId: session.id});\n                    })\n                    .then(function (result) {\n                        \/\/ If `redirectToCheckout` fails due to a browser or network\n                        \/\/ error, you should display the localized error message to your\n                        \/\/ customer using `error.message`.\n                        if (result.error) {\n                            alert(result.error.message);\n                        }\n                    })\n                    .catch(function (error) {\n                        console.error('Error:', error);\n                    });\n        });\n    }\n<\/script>"
+        }
+      ]
+    }
+  ]
+}

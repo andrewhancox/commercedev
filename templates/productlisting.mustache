@@ -1,0 +1,26 @@
+<div class="card-deck">
+    {{#products}}
+        <div class="product card">
+            <div class="card-header">{{name}}</div>
+            <div class="card-body">
+                <p class="card-text">{{{description}}}</p>
+            </div>
+            <div class="card-footer">
+                <div class="card-group">
+                    {{#prices}}
+                        <div class="price card">
+                            <div class="card-header">{{price}}</div>
+                            <div class="card-body">
+                                <p class="card-text">{{{description}}}</p>
+                                <p class="card-text">{{recurrence}}</p>
+                            </div>
+                            <div class="card-footer">
+                                {{{form}}}
+                            </div>
+                        </div>
+                    {{/prices}}
+                </div>
+            </div>
+        </div>
+    {{/products}}
+</div>
